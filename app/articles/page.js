@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link"; // Import Link from next/link
 import ArticleCard from "@/components/article-card";
+import Categories from "@/components/categories";
 
 const articles = [
   {
@@ -48,19 +49,24 @@ const articles = [
 
 const ArticlesPage = () => {
   return (
-    <div className="container mx-auto px-4 py-8 min-h-screen">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-teal-800 mb-2">উম্মাহ ভয়েস</h1>
-        <p className="text-lg text-gray-700">
-          ইসলামী জীবনধারা ও বিভিন্ন সমস্যা ও সমাধানের ব্লগ
-        </p>
-      </header>
+    <div className="lg:grid grid-cols-12 container mx-auto px-4 py-8 min-h-screen">
+      <div className="col-span-10">
+        <header className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-teal-800 mb-2">
+            উম্মাহ ভয়েস
+          </h1>
+          <p className="text-lg text-gray-700">
+            ইসলামী জীবনধারা ও বিভিন্ন সমস্যা ও সমাধানের ব্লগ
+          </p>
+        </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {articles.map((article) => (
-          <ArticleCard key={article.id} article={article} />
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {articles.map((article) => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
+        </div>
       </div>
+      <Categories />
     </div>
   );
 };
