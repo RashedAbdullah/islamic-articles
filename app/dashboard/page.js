@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   FaRegEdit,
@@ -6,8 +7,9 @@ import {
   FaChartPie,
 } from "react-icons/fa";
 
-const DashboardPage = () => {
-  // Sample data for statistics
+const DashboardPage = async () => {
+
+
   const stats = {
     articles: 20,
     categories: 5,
@@ -42,6 +44,8 @@ const DashboardPage = () => {
           <p className="text-gray-600">মোট ভিউস</p>
         </div>
       </section>
+
+
 
       {/* Actions Section */}
       <section className="mb-8">
@@ -82,7 +86,6 @@ const DashboardPage = () => {
               </tr>
             </thead>
             <tbody>
-              {/* Replace this with dynamic data */}
               <tr className="border-b">
                 <td className="p-2">ইসলামিক অর্থনীতি</td>
                 <td className="p-2">রাশেদ আব্দুল্লাহ</td>
@@ -96,7 +99,6 @@ const DashboardPage = () => {
                   </button>
                 </td>
               </tr>
-              {/* More rows can go here */}
             </tbody>
           </table>
         </div>
