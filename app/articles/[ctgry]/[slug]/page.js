@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import CommentSection from "@/components/comment-section";
 import ArticlesByCategory from "@/components/articles-by-category";
+import ShareSection from "@/components/share-section";
 
 // Example articles data for demonstration. In a real app, fetch this from a database or API.
 const article = {
@@ -56,6 +57,8 @@ const SingleArticlePage = () => {
           <div className="p-6">
             <p className="text-gray-700 text-lg">{article.description}</p>
           </div>
+
+          <ShareSection />
         </div>
         <CommentSection />
       </div>

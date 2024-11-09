@@ -44,7 +44,7 @@ const ArticlesByCategory = ({ selectedCategory = "অর্থনীতি" }) =
 
   return (
     <div className="px-4 col-span-3">
-      <h1 className="text-3xl font-bold mb-6">{selectedCategory}</h1>
+      <h1 className="text-3xl font-bold my-6 dark:text-teal-100 text-teal-900">{selectedCategory}</h1>
 
       {filteredArticles.length > 0 ? (
         <div className="grid grid-cols-1 gap-8">

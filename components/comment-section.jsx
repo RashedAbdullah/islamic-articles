@@ -42,7 +42,7 @@ const CommentSection = () => {
       <h2 className="text-2xl font-bold mb-4">মন্তব্য</h2>
 
       {/* Comment Input Form */}
-      <form onSubmit={handleCommentSubmit} className="mb-6">
+      <form onSubmit={handleCommentSubmit} className="my-6">
         <textarea
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
           placeholder="আপনার মন্তব্য লিখুন..."

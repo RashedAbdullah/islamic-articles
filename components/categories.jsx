@@ -12,7 +12,7 @@ const categories = [
 const Categories = () => {
   return (
     <div className="container mx-auto px-4 col-span-2">
-      <h1 className="text-3xl font-bold mb-6">সমস্ত ক্যাটাগরি</h1>
+      <h1 className="text-3xl font-bold my-6 dark:text-teal-100 text-teal-900">সমস্ত ক্যাটাগরি</h1>
       <div className="">
         {categories.map((category) => (
           <Link

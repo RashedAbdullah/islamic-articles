@@ -1,6 +1,4 @@
-import Image from "next/image";
 import React from "react";
-import Link from "next/link"; // Import Link from next/link
 import ArticleCard from "@/components/article-card";
 import Categories from "@/components/categories";
 
@@ -53,7 +51,7 @@ const ArticlesPage = () => {
       <div className="col-span-10">
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold text-teal-800 mb-2">
-            উম্মাহ ভয়েস
+            সাম্প্রতিক প্রবন্ধসমূহ
           </h1>
           <p className="text-lg text-gray-700">
             ইসলামী জীবনধারা ও বিভিন্ন সমস্যা ও সমাধানের ব্লগ

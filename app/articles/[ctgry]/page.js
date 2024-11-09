@@ -40,7 +40,7 @@ const ArticleByCategoryPage = ({ selectedCategory = "অর্থনীতি" }
   return (
     <div className="container px-4 py-8 lg:grid grid-cols-12 min-h-screen">
       <div className="col-span-10">
-        <h1 className="text-3xl font-bold mb-6">
+        <h1 className="text-3xl font-bold my-6 dark:text-teal-100 text-teal-900">
           {selectedCategory} ক্যাটাগরির নিবন্ধসমূহ
         </h1>
 

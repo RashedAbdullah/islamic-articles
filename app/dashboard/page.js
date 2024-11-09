@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import React from "react";
 import {
   FaRegEdit,
@@ -8,8 +8,6 @@ import {
 } from "react-icons/fa";
 
 const DashboardPage = async () => {
-
-
   const stats = {
     articles: 20,
     categories: 5,
@@ -17,7 +15,7 @@ const DashboardPage = async () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 min-h-screen">
       {/* Dashboard Header */}
       <header className="text-center mb-8">
         <h1 className="text-4xl font-bold text-teal-800 mb-2">ড্যাশবোর্ড</h1>
@@ -45,16 +43,17 @@ const DashboardPage = async () => {
         </div>
       </section>
 
-
-
       {/* Actions Section */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">দ্রুত পদক্ষেপ</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <button className="flex items-center justify-center p-4 bg-teal-500 text-white rounded-lg shadow hover:bg-teal-600">
+          <Link
+            href="/dashboard/add-article"
+            className="flex items-center justify-center p-4 bg-teal-500 text-white rounded-lg shadow hover:bg-teal-600"
+          >
             <FaPlusCircle className="mr-2" />
             নতুন প্রবন্ধ যোগ করুন
-          </button>
+          </Link>
           <button className="flex items-center justify-center p-4 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">
             <FaRegEdit className="mr-2" />
             প্রবন্ধ সম্পাদনা করুন

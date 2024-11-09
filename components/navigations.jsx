@@ -1,32 +1,14 @@
-import Link from "next/link";
+import ActiveNav from "./active-nav";
+
 
 const Navigations = () => {
   return (
     <nav className="space-x-4 hidden md:inline-block">
-      <Link
-        href="/"
-        className="hover:text-teal-600 transition-all duration-300"
-      >
-        হোম
-      </Link>
-      <Link
-        href="/about"
-        className="hover:text-teal-600 transition-all duration-300"
-      >
-        আমাদের সম্পর্কে
-      </Link>
-      <Link
-        href="/articles"
-        className="hover:text-teal-600 transition-all duration-300"
-      >
-        আর্টিকেলস
-      </Link>
-      <Link
-        href="/contact"
-        className="hover:text-teal-600 transition-all duration-300"
-      >
-        যোগাযোগ
-      </Link>
+      <ActiveNav href="/">হোম</ActiveNav>
+      <ActiveNav href="/about">আমাদের সম্পর্কে</ActiveNav>
+      <ActiveNav href="/articles">প্রবন্ধ</ActiveNav>
+      <ActiveNav href="/authors">লেখকবৃন্দ</ActiveNav>
+      <ActiveNav href="/contact">যোগাযোগ</ActiveNav>
     </nav>
   );
 };
