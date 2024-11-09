@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import CommentSection from "@/components/comment-section";
+import ArticlesByCategory from "@/components/articles-by-category";
 
 // Example articles data for demonstration. In a real app, fetch this from a database or API.
 const article = {
@@ -24,34 +26,40 @@ const SingleArticlePage = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        <div className="relative">
-          {/* Article Cover Image */}
-          <Image
-            height={600}
-            width={800}
-            src={article.coverImage}
-            alt={article.title}
-            className="w-full h-80 object-cover"
-          />
+    <div className="container lg:grid grid-cols-12 px-4 py-8">
+      <div className="col-span-9">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="relative">
+            {/* Article Cover Image */}
+            <Image
+              height={600}
+              width={800}
+              src={article.coverImage}
+              alt={article.title}
+              className="w-full h-80 object-cover"
+            />
 
-          {/* Overlay with Title, Author, and Date */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-6">
-            <div className="text-sm text-teal-200 mb-1">{article.category}</div>
-            <h1 className="text-3xl font-bold text-white mb-2">
-              {article.title}
-            </h1>
-            <div className="text-sm text-gray-300">
-              লেখক: {article.author} | প্রকাশিত: {article.publishedAt}
+            {/* Overlay with Title, Author, and Date */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-6">
+              <div className="text-sm text-teal-200 mb-1">
+                {article.category}
+              </div>
+              <h1 className="text-3xl font-bold text-white mb-2">
+                {article.title}
+              </h1>
+              <div className="text-sm text-gray-300">
+                লেখক: {article.author} | প্রকাশিত: {article.publishedAt}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="p-6">
-          <p className="text-gray-700 text-lg">{article.description}</p>
+          <div className="p-6">
+            <p className="text-gray-700 text-lg">{article.description}</p>
+          </div>
         </div>
+        <CommentSection />
       </div>
+      <ArticlesByCategory />
     </div>
   );
 };

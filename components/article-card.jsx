@@ -38,7 +38,7 @@ const ArticleCard = ({ article }) => {
 
         {/* Link to details page in Bangla */}
         <Link
-          href={`/articles/${article.id}`}
+          href={`/articles/${article.id}/lskdjf`}
           className="text-teal-600 dark:text-teal-200 hover:underline"
         >
           বিস্তারিত পড়ুন
